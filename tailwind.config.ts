@@ -24,6 +24,7 @@ export default {
           950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
         dark: '#222222',
+        background: '#110E11',
       },
       keyframes: {
         flicker: {
@@ -52,5 +53,30 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#57534e',
+
+          secondary: '#78716c',
+
+          accent: '#292524',
+
+          neutral: '#6b7280',
+
+          'base-100': '#ffffff',
+
+          info: '#9ca3af',
+
+          success: '#065f46',
+
+          warning: '#7f1d1d',
+
+          error: '#713f12',
+        },
+      },
+    ],
+  },
+  plugins: [require('@tailwindcss/forms'), require('daisyui')],
 } satisfies Config;
